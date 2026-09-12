@@ -1,22 +1,14 @@
-- name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20
-          # Remove cache: 'npm' line here
-
-name: Deploy React Site to GitHub Pages
+name: Deploy Static Site to GitHub Pages
 
 on:
   push:
     branches: ["main"]
 
-# Allow GITHUB_TOKEN to deploy to GitHub Pages
 permissions:
   contents: read
   pages: write
   id-token: write
 
-# Allow one concurrent deployment
 concurrency:
   group: "pages"
   cancel-in-progress: true
@@ -31,28 +23,13 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20
-          cache: 'npm'
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
 
-      - name: Install dependencies
-        run: |
-          if [ -f package-lock.json ]; then
-            npm ci
-          else
-            npm install
-          fi
-
-      - name: Build project
-        run: npm run build
-        # If your build directory is root rather than dist/build, adapt upload-pages-artifact below.
-
-      - name: Upload GitHub Pages artifact
+      - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './dist' # Use './build' if using Create-React-App, or '.' if hosting plain pre-built HTML
+          path: '.'
 
       - name: Deploy to GitHub Pages
         id: deployment
