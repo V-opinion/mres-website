@@ -13,11 +13,15 @@
 
     <!-- Injected by CF FE Dispatcher -->
  <!-- Replace /assets/ with ./assets/ -->
+<!-- BEFORE (Causing 404 MIME error on custom domain root): -->
 <script type="module" crossorigin src="./assets/index-CiSwpJxQ.js"></script>
 <link rel="stylesheet" crossorigin href="./assets/index-CX9DVjAh.css">
-
-<!-- Replace /youware-lib... with ./youware-lib... -->
 <script src="./youware-lib-edgespark.1765263091.js" id="yourware-lib"></script>
+
+<!-- AFTER (Correct for Custom Domain root): -->
+<script type="module" crossorigin src="/assets/index-CiSwpJxQ.js"></script>
+<link rel="stylesheet" crossorigin href="/assets/index-CX9DVjAh.css">
+<script src="/youware-lib-edgespark.1765263091.js" id="yourware-lib"></script>
 </head>
 
 <body>
