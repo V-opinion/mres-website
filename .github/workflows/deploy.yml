@@ -1,3 +1,9 @@
+- name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          # Remove cache: 'npm' line here
+
 name: Deploy React Site to GitHub Pages
 
 on:
