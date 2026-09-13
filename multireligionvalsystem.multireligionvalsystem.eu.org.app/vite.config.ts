@@ -3,5 +3,5 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
-  base: '/', // Sets root base path for custom domain
+  base: 'https://www.multireligionvalsystem.eu.org/mres-website/', // Ensures JS, CSS, and asset paths include the subfolder
 })
