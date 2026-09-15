@@ -17,6 +17,7 @@ import {
   Target,
   Award,
   CheckCircle2,
+  Heart,
 } from "lucide-react";
 
 const fadeUp = {
@@ -509,6 +510,42 @@ export default function AIMagneticBacklinks({
                       </p>
                     </div>
                   </button>
+                  <a
+                    href="https://asyl-och-flyktingpolitik.multireligionvalsystem.eu.org/din-kommun"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-3 p-4 rounded-xl bg-white/[0.03] hover:bg-white/[0.06] transition-colors text-left group"
+                  >
+                    <div className="w-10 h-10 rounded-lg bg-[var(--color-accent)]/15 flex items-center justify-center text-[var(--color-accent)]">
+                      <Globe className="w-5 h-5" />
+                    </div>
+                    <div>
+                      <p className="text-sm font-semibold group-hover:text-[var(--color-accent)] transition-colors">
+                        Din kommun
+                      </p>
+                      <p className="text-xs text-[var(--color-text-muted)]">
+                        Asyl- och flyktingpolitik
+                      </p>
+                    </div>
+                  </a>
+                  <a
+                    href="https://asyl-och-flyktingpolitik.multireligionvalsystem.eu.org/ditt-riksdags-parti"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-3 p-4 rounded-xl bg-white/[0.03] hover:bg-white/[0.06] transition-colors text-left group"
+                  >
+                    <div className="w-10 h-10 rounded-lg bg-[var(--color-accent)]/15 flex items-center justify-center text-[var(--color-accent)]">
+                      <Target className="w-5 h-5" />
+                    </div>
+                    <div>
+                      <p className="text-sm font-semibold group-hover:text-[var(--color-accent)] transition-colors">
+                        Ditt riksdagsparti
+                      </p>
+                      <p className="text-xs text-[var(--color-text-muted)]">
+                        Hur partiet röstar
+                      </p>
+                    </div>
+                  </a>
                 </div>
               </div>
 
