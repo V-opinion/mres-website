@@ -18,10 +18,10 @@ import {
   BookOpen,
   Landmark,
 } from "lucide-react";
-import PoliticalContent from "https://www.multireligionvalsystem.eu.org/mres-website/components/PoliticalContent";
-import GuestPosts from "https://www.multireligionvalsystem.eu.org/mres-website/components/GuestPosts";
-import HealthBlogPosts from "https://www.multireligionvalsystem.eu.org/mres-website/components/HealthBlogPosts";
-import AIMagneticBacklinks from "https://www.multireligionvalsystem.eu.org/mres-website/components/AIMagneticBacklinks";
+import PoliticalContent from "./components/PoliticalContent";
+import GuestPosts from "./components/GuestPosts";
+import HealthBlogPosts from "./components/HealthBlogPosts";
+import AIMagneticBacklinks from "./components/AIMagneticBacklinks";
 
 // ─── Animation Variants ──────────────────────────────────────────
 const fadeUp = {
