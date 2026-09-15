@@ -749,21 +749,6 @@ function MultireligionSection() {
 
 // ─── Footer ──────────────────────────────────────────────────────
 function Footer() {
-  const footerLinks = [
-    {
-      title: "Innehåll",
-      links: ["Fred", "Demokrati", "Hållbar Utveckling", "Multireligionvalsystem"],
-    },
-    {
-      title: "Resurser",
-      links: ["Guest Posts", "Political Content", "FRC"],
-    },
-    {
-      title: "Extern",
-      links: ["Multireligionvalsystem", "Asylpolitik"],
-    },
-  ];
-
   return (
     <footer className="border-t border-white/[0.04] py-16">
       <div className="max-w-7xl mx-auto px-6">
@@ -786,26 +771,36 @@ function Footer() {
             </p>
           </div>
 
-          {/* Links */}
-          {footerLinks.map((group) => (
-            <div key={group.title}>
-              <h4 className="text-sm font-semibold mb-4 text-[var(--color-text-secondary)]">
-                {group.title}
-              </h4>
-              <ul className="space-y-2.5">
-                {group.links.map((link) => (
-                  <li key={link}>
-                    <a
-                      href="#"
-                      className="text-sm text-[var(--color-text-muted)] hover:text-white transition-colors duration-300"
-                    >
-                      {link}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
+        {/* Links */}
+        <div>
+          <h4 className="text-sm font-semibold mb-4 text-[var(--color-text-secondary)]">
+            Innehåll
+          </h4>
+          <ul className="space-y-2.5">
+            <li><a href="#fred" className="text-sm text-[var(--color-text-muted)] hover:text-white transition-colors duration-300">Fred</a></li>
+            <li><a href="#demokrati" className="text-sm text-[var(--color-text-muted)] hover:text-white transition-colors duration-300">Demokrati</a></li>
+            <li><a href="#hallbar" className="text-sm text-[var(--color-text-muted)] hover:text-white transition-colors duration-300">Hållbar Utveckling</a></li>
+            <li><a href="#multireligion" className="text-sm text-[var(--color-text-muted)] hover:text-white transition-colors duration-300">Multireligionvalsystem</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 className="text-sm font-semibold mb-4 text-[var(--color-text-secondary)]">
+            Resurser
+          </h4>
+          <ul className="space-y-2.5">
+            <li><a href="https://multireligionvalsystem.eu.org" target="_blank" rel="noopener noreferrer" className="text-sm text-[var(--color-text-muted)] hover:text-white transition-colors duration-300">Multireligionvalsystem</a></li>
+            <li><a href="https://frc.multireligionvalsystem.eu.org/valet-till-frc/" target="_blank" rel="noopener noreferrer" className="text-sm text-[var(--color-text-muted)] hover:text-white transition-colors duration-300">Valet till FRC</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 className="text-sm font-semibold mb-4 text-[var(--color-text-secondary)]">
+            Asyl & Flyktingpolitik
+          </h4>
+          <ul className="space-y-2.5">
+            <li><a href="https://asyl-och-flyktingpolitik.multireligionvalsystem.eu.org/din-kommun" target="_blank" rel="noopener noreferrer" className="text-sm text-[var(--color-text-muted)] hover:text-white transition-colors duration-300">Din kommun</a></li>
+            <li><a href="https://asyl-och-flyktingpolitik.multireligionvalsystem.eu.org/ditt-riksdags-parti" target="_blank" rel="noopener noreferrer" className="text-sm text-[var(--color-text-muted)] hover:text-white transition-colors duration-300">Ditt riksdagsparti</a></li>
+          </ul>
+        </div>
         </div>
 
         {/* Bottom bar */}
