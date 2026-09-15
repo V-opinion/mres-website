@@ -1,4 +1,4 @@
-name: Deploy React Site to GitHub Pages
+name: Deploy Static Site to GitHub Pages
 
 on:
   push:
@@ -14,7 +14,7 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  deploy:
+  build-and-deploy:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
@@ -23,21 +23,20 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Setup Node.js
+      - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 20
 
-      - name: Install and Build React App
-        working-directory: ./multireligionvalsystem.multireligionvalsystem.eu.org.app
+      - name: Install dependencies & Build
         run: |
           npm install
           npm run build
 
-      - name: Upload GitHub Pages artifact
+      - name: Upload Artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './multireligionvalsystem.multireligionvalsystem.eu.org.app/dist'
+          path: './dist'
 
       - name: Deploy to GitHub Pages
         id: deployment
