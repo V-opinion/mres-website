@@ -39,6 +39,9 @@ const staggerContainer = {
   },
 };
 
+import SocialBar from "./SocialBar";
+import CallToAction from "./CallToAction";
+
 /* ─── Blog Post Card ──────────────────────────────────────────── */
 interface BlogPost {
   id: string;
@@ -187,7 +190,7 @@ function FullBlogPost({
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 text-[var(--color-accent)] hover:text-white text-sm font-medium transition-colors"
           >
-            Läs mer på Multireligionvalsystem
+            Läs mer på MRES
             <ExternalLink className="w-4 h-4" />
           </a>
         </div>
@@ -242,7 +245,7 @@ const blogPosts: BlogPost[] = [
     content: [
       "Genom denna demokratiutveckling kan vi nämligen åstadkomma fred — något som är omöjligt att uppnå med vanlig politik, förhandlingar, Nobels fredsprisutdelningar, FN, EU eller genom krig.",
       "The religious parties in the Riksdag and the EU Parliament oppose completing the incomplete separation between state and church and between religion and politics, which in turn means that the 78-year-old conflict between Israel and Palestine remains unresolved.",
-      "Detta konfliktövergång och avancerade konfliktlösningsmodell innebär en övergång från kyrkovalet till ett Multireligionvalsystem i de nordiska länder som redan tillämpar kyrkovalet. I övriga länder införs direkt Multireligionvalsystem.",
+      "Detta konfliktövergång och avancerade konfliktlösningsmodell innebär en övergång från kyrkovalet till ett MRES i de nordiska länder som redan tillämpar kyrkovalet. I övriga länder införs direkt MRES.",
       "Målet är att den 78 år långa konflikten mellan Israel och Palestina på det sättet förhindras från att den olösta konflikten överförs till nästa generation. Detta bidrar i sin tur till att klimatmålen följs även av stater, bland annat i Mellanöstern.",
       "Fredskonceptet bygger på insikten att politiska lösningar och militär makt aldrig kan skapa varaktig fred. Istället måste vi bygga demokratiska strukturer som gör det möjligt för alla parter att delta i beslutsfattandet.",
       "En stabil demokrati minskar flyktingtrycket. Kristerssons och Anderssons politik är en av orsakerna till att folk flyr från sina hemländer. Genom att lösa konflikter kan biståndet fokuseras på utveckling istället för akut krishantering.",
@@ -263,7 +266,7 @@ const blogPosts: BlogPost[] = [
       "The religious parties in the Riksdag and the EU Parliament oppose completing the incomplete separation between state and church and between religion and politics, which in turn means that the 78-year-old conflict between Israel and Palestine remains unresolved.",
       "Att Liberalismen dök upp som en följd av tre revolutioner: John Locke den engelska 1688 — \"den styrande fick sin makt av folket istället för Gud och att folket hade rätt att byta ut misshagliga härskare\" — den amerikanska 1776 och den franska revolutionen 1776.",
       "Denna grundläggande demokratisk princip — att makt kommer från folket, inte från Gud — måste tillämpas konsekvent i alla delar av samhället, inklusive inom religiösa samfund.",
-      "Genom Multireligionvalsystem kan vi skapa en ram där alla religioner kan utöva sin demokrati på ett sätt som respekterar både religiösa övertygelser och demokratiska principer.",
+      "Genom MRES kan vi skapa en ram där alla religioner kan utöva sin demokrati på ett sätt som respekterar både religiösa övertygelser och demokratiska principer.",
       "Den styrande fick sin makt av folket istället för Gud och att folket hade rätt att byta ut misshagliga härskare. Denna sanning måste vara grunden för all politik i Sverige och i hela världen.",
     ],
     author: "Stat & Kyrka",
@@ -274,17 +277,17 @@ const blogPosts: BlogPost[] = [
   },
   {
     id: "multireligionvalsystem",
-    title: "Multireligionvalsystem: Framtidens demokratiska modell",
+    title: "MRES: Framtidens demokratiska modell",
     excerpt:
-      "Multireligionvalsystemet erbjuder en unik möjlighet att föra samman demokrati och religion på ett sätt som främjar fred och förståelse mellan olika trosuppfattningar.",
+      "MRESet erbjuder en unik möjlighet att föra samman demokrati och religion på ett sätt som främjar fred och förståelse mellan olika trosuppfattningar.",
     content: [
-      "Multireligionvalsystem är en övergång från kyrkovalet till ett system som inkluderar alla religioner. Detta innebär en fundamental förändring av hur vi förstår relationen mellan demokrati och religion.",
-      "De fyra pelarna i Multireligionvalsystemet är: demokrati i religion, jämställdhet, ungas rösträtt och inkludering av alla religiösa i alla val. Dessa pelarar grundläggande för att skapa en rättvis och inkluderande demokrati.",
+      "MRES är en övergång från kyrkovalet till ett system som inkluderar alla religioner. Detta innebär en fundamental förändring av hur vi förstår relationen mellan demokrati och religion.",
+      "De fyra pelarna i MRESet är: demokrati i religion, jämställdhet, ungas rösträtt och inkludering av alla religiösa i alla val. Dessa pelarar grundläggande för att skapa en rättvis och inkluderande demokrati.",
       "Genom att tillåta alla trossamfund — Judendom, Islam, Buddhismen, Hinduism, katoliker, ortodoxa och andra kristna — att delta i ett gemensamt valsystem kan vi bygga brot mellan olika kulturer och övertygelser.",
-      "Fred kan inte uppnås utan att alla parter känner sig inkluderade i det demokratiska systemet. Multireligionvalsystemet ger alla en röst och en plats vid bordet.",
+      "Fred kan inte uppnås utan att alla parter känner sig inkluderade i det demokratiska systemet. MRESet ger alla en röst och en plats vid bordet.",
       "Engagera dig nu! Besök multireligionvalsystem.eu.org för att lära dig mer om hur du kan bidra till en bättre framtid för alla. Tillsammans kan vi skapa en värld där demokrati och religion arbetar tillsammans för fred.",
     ],
-    author: "Multireligionvalsystem",
+    author: "MRES",
     date: "7 sep 2026",
     readTime: "5 min läsning",
     tag: "Multireligion",
@@ -483,6 +486,8 @@ export default function GuestPosts({
           )}
         </AnimatePresence>
       </main>
+      <CallToAction />
+      <SocialBar />
     </div>
   );
 }
