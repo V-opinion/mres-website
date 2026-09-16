@@ -33,6 +33,9 @@ const staggerContainer = {
   },
 };
 
+import SocialBar from "./SocialBar";
+import CallToAction from "./CallToAction";
+
 /* ─── Accordion Section ───────────────────────────────────────── */
 function AccordionSection({
   icon,
@@ -256,7 +259,7 @@ export default function PoliticalContent({
                 rel="noopener noreferrer"
                 className="text-[var(--color-accent)] hover:underline inline-flex items-center gap-1"
               >
-                Multireligionvalsystem — Ditt riksdagsparti
+                MRES — Ditt riksdagsparti
                 <ExternalLink className="w-3.5 h-3.5" />
               </a>
             </InfoCard>
@@ -387,7 +390,7 @@ export default function PoliticalContent({
                 rel="noopener noreferrer"
                 className="text-[var(--color-accent)] hover:underline inline-flex items-center gap-1"
               >
-                Multireligionvalsystem — FRED
+                MRES — FRED
                 <ExternalLink className="w-3.5 h-3.5" />
               </a>
               <span className="text-[var(--color-text-muted)] block mt-2">
@@ -410,10 +413,10 @@ export default function PoliticalContent({
             </InfoCard>
           </AccordionSection>
 
-          {/* Section 7: Kyrkovalsreformen & Multireligionvalsystem */}
+          {/* Section 7: Kyrkovalsreformen & MRES */}
           <AccordionSection
             icon={<Landmark className="w-5 h-5" />}
-            title="Kyrkovalsreformen &amp; Multireligionvalsystem"
+            title="Kyrkovalsreformen &amp; MRES"
           >
             <p>
               Att åstadkomma en fullbordad separation mellan stat och kyrka
@@ -475,10 +478,10 @@ export default function PoliticalContent({
               krig.
             </p>
 
-            <HighlightQuote text="Detta konfliktövergång och avancerade konfliktlösningsmodell innebär en övergång från kyrkovalet till ett Multireligionvalsystem i de nordiska länder som redan tillämpar kyrkovalet." />
+            <HighlightQuote text="Detta konfliktövergång och avancerade konfliktlösningsmodell innebär en övergång från kyrkovalet till ett MRES i de nordiska länder som redan tillämpar kyrkovalet." />
 
             <p>
-              I övriga länder införs direkt Multireligionvalsystem. Målet är
+              I övriga länder införs direkt MRES. Målet är
               att den 78 år långa konflikten mellan Israel och Palestina på
               det sättet förhindras från att den olösta konflikten överförs
               till nästa generation. Detta bidrar i sin tur till att
@@ -493,7 +496,7 @@ export default function PoliticalContent({
                   rel="noopener noreferrer"
                   className="text-[var(--color-accent)] hover:underline inline-flex items-center gap-1"
                 >
-                  Multireligionvalsystem — FRED
+                  MRES — FRED
                   <ExternalLink className="w-3.5 h-3.5" />
                 </a>
               </InfoCard>
@@ -540,7 +543,7 @@ export default function PoliticalContent({
                     rel="noopener noreferrer"
                     className="text-[var(--color-accent)] hover:underline inline-flex items-center gap-1"
                   >
-                    Multireligionvalsystem — Ditt riksdagsparti
+                    MRES — Ditt riksdagsparti
                     <ExternalLink className="w-3.5 h-3.5" />
                   </a>
                 </InfoCard>
@@ -551,7 +554,7 @@ export default function PoliticalContent({
                     rel="noopener noreferrer"
                     className="text-[var(--color-accent)] hover:underline inline-flex items-center gap-1"
                   >
-                    Multireligionvalsystem — Unikt fredskoncept
+                    MRES — Unikt fredskoncept
                     <ExternalLink className="w-3.5 h-3.5" />
                   </a>
                 </InfoCard>
@@ -667,6 +670,8 @@ export default function PoliticalContent({
           </div>
         </motion.div>
       </main>
+      <CallToAction />
+      <SocialBar />
     </div>
   );
 }
