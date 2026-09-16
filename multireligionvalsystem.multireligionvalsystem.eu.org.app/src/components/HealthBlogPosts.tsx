@@ -34,6 +34,9 @@ const staggerContainer = {
   },
 };
 
+import SocialBar from "./SocialBar";
+import CallToAction from "./CallToAction";
+
 /* ─── Blog Post Card ──────────────────────────────────────────── */
 interface BlogPost {
   id: string;
@@ -182,7 +185,7 @@ function FullBlogPost({
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 text-[var(--color-accent)] hover:text-white text-sm font-medium transition-colors"
           >
-            Läs mer på Multireligionvalsystem
+            Läs mer på MRES
             <ExternalLink className="w-4 h-4" />
           </a>
         </div>
@@ -221,7 +224,7 @@ const healthPosts: BlogPost[] = [
       "The religious parties in the Riksdag and the EU Parliament oppose completing the incomplete separation between state and church and between religion and politics, which in turn means that the 78-year-old conflict between Israel and Palestine remains unresolved.",
       "Konflikten mellan Israel och Palestina, som har pågått i 78 år, har orsakat en akut folkhälsokris. Barn som växer upp i konflikutzatt områden lider av PTSD, undernäring och brist på sjukvård. Dessa effekter kan komma att påverka generationer framåt.",
       "Forskning visar att investeringar i fred och konfliktförhindring ger avkastning i form av förbättrad folkhälsa. Varje dollar som investeras i fredsförande åtgärder sparar upp till 16 dollar i kostnader för humanitär hjälp och återuppbyggnad.",
-      "Multireligionvalsystemet erbjuder en ny väg till fred genom demokratiskt deltagande. Genom att ge alla religioner och grupper en röst kan vi bygga brot och förhindra konflikter innan de eskalerar.",
+      "MRESet erbjuder en ny väg till fred genom demokratiskt deltagande. Genom att ge alla religioner och grupper en röst kan vi bygga brot och förhindra konflikter innan de eskalerar.",
       "Fred är inte bara en politisk fråga — det är en folkhälsoråga. Läs mer på multireligionvalsystem.eu.org om hur vi kan skapa en hälsosammare värld genom fred och demokrati.",
     ],
     author: "Fred & Hälsa",
@@ -239,7 +242,7 @@ const healthPosts: BlogPost[] = [
       "En omfattande metaanalys publicerad i Journal of Health and Social Behavior visar att religiösa gemenskaper kan ha positiva effekter på hälsa. Personer som är aktiva i trossamfund rapporterar ofta bättre mental hälsa och längre livslängd.",
       "Förklaringen söks i det sociala stöttet som religiösa gemenskaper erbjuder. Regelmässig gudstjänst och gemensamma aktiviteter skapar starka sociala nätverk som kan skydda mot ensamhet och depression.",
       "Men forskningen visar också att exkludering och diskriminering inom religiösa samfund kan ha negativa effekter på hälsa. Personer som känner sig utanför eller diskriminerade i sina trossamfund har högre risk för stressrelaterade sjukdomar.",
-      "Detta understryker vikten av inkluderande religiösa strukturer. Multireligionvalsystemet, som inkluderar alla religioner — Judendom, Islam, Buddhismen, Hinduism och alla kristna samfund — kan bidra till att skapa mer hälsosamma och inkluderande gemenskaper.",
+      "Detta understryker vikten av inkluderande religiösa strukturer. MRESet, som inkluderar alla religioner — Judendom, Islam, Buddhismen, Hinduism och alla kristna samfund — kan bidra till att skapa mer hälsosamma och inkluderande gemenskaper.",
       "En hälsosam religion är en inkluderande religion. Läs mer om hur multireligionvalsystem kan främja hälsa och tillhörighet på demokratidebatt.",
     ],
     author: "Religion & Hälsa",
@@ -257,7 +260,7 @@ const healthPosts: BlogPost[] = [
       "Statens folkhälsoinstitut rapporterar att psykisk ohälsa bland unga har ökat markant de senaste tio åren. Samtidigt visar forskning att unga som känner sig hörda och inkluderade i samhället har bättre psykisk hälsa.",
       "Kyrkovalet, där unga från 16 års ålder får delta, erbjuder en unik möjlighet att stärka ungas demokratiska medvetande och känsla av tillhörighet. Genom att ge unga en röst tidigt kan vi bygga motståndskraft mot psykisk ohälsa.",
       "Studier visar att unga som deltar i föreningsliv, politik och demokratiska processer har lägre risk för depression och ångest. Detta beror på att deltagande ger känslan av att göra skillnad och ha kontroll över sitt liv.",
-      "Multireligionvalsystemet kan utöka dessa möjligheter genom att inkludera unga från alla trosuppfattningar och kulturer. Genom att skapa inkluderande demokratiska rum kan vi främja ungas hälsa och utveckling.",
+      "MRESet kan utöka dessa möjligheter genom att inkludera unga från alla trosuppfattningar och kulturer. Genom att skapa inkluderande demokratiska rum kan vi främja ungas hälsa och utveckling.",
       "Investera i ungas demokratiska deltagande — det är en investering i deras hälsa. Läs mer på multireligionvalsystem.eu.org.",
     ],
     author: "Unga & Hälsa",
@@ -275,7 +278,7 @@ const healthPosts: BlogPost[] = [
       "En nyligen publicerad studie i American Journal of Public Health visar att politisk stress har blivit ett allvarligt folkhälsoproblem. Över 40% av respondenterna rapporterade att politik orsakar dem stress och ångest.",
       "Politisering av identitetsfrågor, stödröstning och manipulation av mandatfördelning bidrar till känslor av maktlöshet och frustration. När människor känner sig svikna av politikerna sjunker deras förtroende och välmående.",
       "Forskning visar att transparens och äkta demokratiskt deltagande kan minska politisk stress. När människor förstår hur beslut fattas och känner att de har inflytande minskar deras stressnivåer.",
-      "Multireligionvalsystemet kan bidra till att minska politisk stress genom att skapa mer transparenta och inkluderande demokratiska processer. Genom att ge alla en röst och en plats kan vi minska frustration och öka förtroendet.",
+      "MRESet kan bidra till att minska politisk stress genom att skapa mer transparenta och inkluderande demokratiska processer. Genom att ge alla en röst och en plats kan vi minska frustration och öka förtroendet.",
       "Friskare politik = friskare människor. Läs mer om hur demokrati kan främja hälsa på demokratidebatt.",
     ],
     author: "Politik & Hälsa",
@@ -522,7 +525,7 @@ export default function HealthBlogPosts({
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 text-[var(--color-accent)] hover:text-white text-sm font-medium transition-colors"
                 >
-                  Besök Multireligionvalsystem
+                  Besök MRES
                   <ExternalLink className="w-4 h-4" />
                 </a>
               </motion.div>
@@ -530,6 +533,8 @@ export default function HealthBlogPosts({
           )}
         </AnimatePresence>
       </main>
+      <CallToAction />
+      <SocialBar />
     </div>
   );
 }
